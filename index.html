@@ -22,6 +22,25 @@
         #msg1 { background: #fff;color: #000;position: fixed;width: 100px;bottom:85px;right: 90px;font-size: 12px;line-height: 13px;padding: 3px; border-radius: 10px; border:1px solid #e2e2e2; box-shadow: 2px 2px 3px #999;z-index:100;  }
         </style>
         
+    <script>    
+        function disableselect(e){   
+return false   
+}   
+
+function reEnable(){   
+return true   
+}   
+
+//if IE4+   
+document.onselectstart=new Function ("return false")   
+document.oncontextmenu=new Function ("return false")   
+//if NS6   
+if (window.sidebar){   
+document.onmousedown=disableselect   
+document.onclick=reEnable   
+}   
+   </script>     
+        
     </head>
     <body id="page-top">
         <!-- Navigation-->
